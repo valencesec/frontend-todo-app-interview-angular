@@ -1,0 +1,12 @@
+<app-api-key-input
+  [apiKey]="apiKey"
+  (apiKeyChanged)="apiKeyChange($event)"
+></app-api-key-input>
+
+<!-- here goes add todo -->
+
+<div class="Todo-list">
+  <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+
+  <span *ngIf="!todos?.length">No items</span>
+</div>
